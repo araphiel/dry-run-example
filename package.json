@@ -7,7 +7,7 @@
   "scripts": {
     "build": "turbo run build",
     "changeset": "changeset",
-    "ci:publish": "changeset publish",
+    "ci:publish": "pnpm build && changeset publish",
     "ci:version": "changeset version"
   },
   "devDependencies": {

@@ -7,8 +7,8 @@
   "scripts": {
     "build": "turbo run build",
     "changeset": "changeset",
-    "changeset:publish": "changeset publish",
-    "changeset:version": "changeset version"
+    "ci:publish": "changeset publish",
+    "ci:version": "changeset version"
   },
   "devDependencies": {
     "@types/node": "^18.11.0",

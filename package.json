@@ -6,9 +6,9 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "build:zip": "sh ./zip.sh",
     "changeset": "changeset",
-    "ci:release-build": "pnpm build && pnpm build:zip",
-    "ci:publish": "changeset publish",
+    "ci:publish": "pnpm build && pnpm build:zip && changeset publish",
     "ci:version": "changeset version"
   },
   "devDependencies": {

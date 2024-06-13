@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@jkomyno/common-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Library that contains common utility functions",
   "main": "lib",
   "scripts": {

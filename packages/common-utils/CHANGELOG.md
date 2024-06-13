@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 0.4.0
+
+### Minor Changes
+
+- c837ff5: Updated docs
+
 ## 0.3.0
 
 ### Minor Changes

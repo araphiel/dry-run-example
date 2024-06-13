@@ -1,5 +1,12 @@
 # @jkomyno/example
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [20cd242]
+  - @jkomyno/common-utils@1.0.0
+
 ## 0.1.3
 
 ### Patch Changes

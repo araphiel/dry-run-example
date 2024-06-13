@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 1.0.0
+
+### Major Changes
+
+- 20cd242: Update docs
+
 ## 0.4.0
 
 ### Minor Changes

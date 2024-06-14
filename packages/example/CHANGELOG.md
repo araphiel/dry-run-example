@@ -1,5 +1,16 @@
 # @jkomyno/example
 
+## 3.0.0
+
+### Major Changes
+
+- 3bc1ff8: Bump
+
+### Patch Changes
+
+- Updated dependencies [3bc1ff8]
+  - @jkomyno/common-utils@4.0.0
+
 ## 2.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 4.0.0
+
+### Major Changes
+
+- 3bc1ff8: Bump
+
 ## 3.1.0
 
 ### Minor Changes

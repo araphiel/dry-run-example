@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 4.1.0
+
+### Minor Changes
+
+- 21effdc: Bump for the build
+
 ## 4.0.0
 
 ### Major Changes

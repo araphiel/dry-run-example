@@ -3,9 +3,8 @@
   "name": "@jkomyno/common-utils",
   "version": "1.0.0",
   "description": "Library that contains common utility functions",
-  "main": "lib",
+  "main": "dist",
   "scripts": {
-    "clean": "rimraf lib",
-    "build": "pnpm clean && tsc"
+    "build": "tsc"
   }
 }

@@ -47,6 +47,6 @@ jobs:
 
       - name: Attach plugin artifacts to it's release
         if: steps.create_release.outputs.published == 'true'
-        run: ./github/scripts/upload-zip.sh
+        run: .github/scripts/upload-zip.sh
         env: 
           PUBLISHED_PACKAGES: '${{ steps.create_release.outputs.publishedPackages }}'

@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "build:zip": "sh ./zip.sh",
+    "build:zip": "pnpm build && sh ./zip.sh",
     "changeset": "changeset"
   },
   "devDependencies": {

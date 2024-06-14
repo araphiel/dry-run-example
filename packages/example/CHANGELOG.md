@@ -1,5 +1,16 @@
 # @jkomyno/example
 
+## 3.1.0
+
+### Minor Changes
+
+- 21effdc: Bump for the build
+
+### Patch Changes
+
+- Updated dependencies [21effdc]
+  - @jkomyno/common-utils@4.1.0
+
 ## 3.0.0
 
 ### Major Changes

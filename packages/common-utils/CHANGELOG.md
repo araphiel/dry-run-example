@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 3.0.0
+
+### Major Changes
+
+- 55671c1: Major Release
+
 ## 2.0.0
 
 ### Major Changes

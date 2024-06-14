@@ -3,8 +3,8 @@ name: Release
 on:
   push:
     paths:
-      - 'packages/**'
-      - ".changeset/**"
+      - packages/**
+      - .changeset/**
     branches: 
      - master
 
@@ -21,10 +21,10 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
 
       - name: Setup PNPM
@@ -37,8 +37,8 @@ jobs:
         uses: changesets/action@v1
         with:
           version: pnpm exec changeset version
-          # Using `changeset tag` we only want to create a release 
-          # If we want to publish to a npm (or github) registry, use `changeset publish` instead
+          # Using `changeset tag`because we only want to create a github release 
+          # If we want to publish to a npm/github package registry, use `changeset publish` instead
           publish: pnpm exec changeset tag
 
       - name: Package compiled plugins as zip files

@@ -1,5 +1,17 @@
 # @jkomyno/example
 
+## 0.2.0
+
+### Minor Changes
+
+- a7ef30e: Updating package deps
+
+### Patch Changes
+
+- Updated dependencies [10af0a4]
+- Updated dependencies [a7ef30e]
+  - @jkomyno/common-utils@1.1.0
+
 ## 0.1.4
 
 ### Patch Changes

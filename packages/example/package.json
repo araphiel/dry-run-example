@@ -9,5 +9,8 @@
   },
   "dependencies": {
     "@jkomyno/common-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2"
   }
 }

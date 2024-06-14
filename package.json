@@ -5,7 +5,7 @@
     "build": "turbo run build",
     "build:zip": "sh ./zip.sh",
     "changeset": "changeset",
-    "ci:publish": "pnpm build && pnpm build:zip && changeset publish",
+    "ci:publish": "changeset tag",
     "ci:version": "changeset version"
   },
   "devDependencies": {

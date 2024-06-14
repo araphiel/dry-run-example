@@ -41,7 +41,7 @@ jobs:
 
       - name: Create plugin zip files
         if: steps.create_release.outputs.published == 'true'
-        run: pnpm ci:release-build
+        run: pnpm build:zip
 
       - name: Add artifacts to the release
         if: steps.create_release.outputs.published == 'true'

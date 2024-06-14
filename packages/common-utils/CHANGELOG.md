@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 3.1.0
+
+### Minor Changes
+
+- 1bc104d: Additonal release test
+
 ## 3.0.0
 
 ### Major Changes

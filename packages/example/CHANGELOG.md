@@ -1,5 +1,16 @@
 # @jkomyno/example
 
+## 2.1.0
+
+### Minor Changes
+
+- 1bc104d: Additonal release test
+
+### Patch Changes
+
+- Updated dependencies [1bc104d]
+  - @jkomyno/common-utils@3.1.0
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,12 @@
 # @jkomyno/common-utils
 
+## 1.1.0
+
+### Minor Changes
+
+- 10af0a4: update docs
+- a7ef30e: Updating package deps
+
 ## 1.0.0
 
 ### Major Changes

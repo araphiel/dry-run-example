@@ -3,10 +3,9 @@
   "name": "@jkomyno/example",
   "version": "0.1.4",
   "description": "Example that imports a local package",
-  "main": "lib",
+  "main": "dist",
   "scripts": {
-    "clean": "rimraf lib",
-    "build": "pnpm clean && tsc"
+    "build": "tsc"
   },
   "dependencies": {
     "@jkomyno/common-utils": "workspace:*"

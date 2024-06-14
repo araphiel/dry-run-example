@@ -1,9 +1,6 @@
 name: CI
 
 on:
-  pull_request:
-    branches: [ master ]
-
   workflow_dispatch:
 
 jobs:
@@ -11,8 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: true
       - name: Build
-        run: pnpm build
+        run: composer install
+      - name: Push
+        run: |
+          git config --global user.email "github-action@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Update composer.lock"
+          git push pantheon remote

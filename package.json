@@ -4,9 +4,7 @@
   "scripts": {
     "build": "turbo run build",
     "build:zip": "sh ./zip.sh",
-    "changeset": "changeset",
-    "ci:publish": "changeset tag",
-    "ci:version": "changeset version"
+    "changeset": "changeset"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.5",

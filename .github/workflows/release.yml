@@ -32,35 +32,21 @@ jobs:
         with:
           run_install: true
 
-      - name: Create Version PR
+      - name: Bump version or create release
         id: create_release
         uses: changesets/action@v1
         with:
-          version: pnpm ci:version
-          publish: pnpm ci:publish
+          version: pnpm exec changeset version
+          # Using `changeset tag` we only want to create a release 
+          # If we want to publish to a npm (or github) registry, use `changeset publish` instead
+          publish: pnpm exec changeset tag
 
-      - name: Create plugin zip files
+      - name: Package compiled plugins as zip files
         if: steps.create_release.outputs.published == 'true'
         run: pnpm build:zip
 
-      - name: Add artifacts to the release
+      - name: Attach plugin artifacts to it's release
         if: steps.create_release.outputs.published == 'true'
-        run: |
-          publishedPackages=${{ steps.create_release.outputs.publishedPackages }}
-          publishedPackages=$(echo "$publishedPackages" | jq -c '.[]')
-
-          for pkg in $publishedPackages; do
-            pkgName=$(echo "$pkg" | jq -r '.name')
-            pkgVersion=$(echo "$pkg" | jq -r '.version')
-            tag="${pkgName}@${pkgVersion}"
-            packageName=$(echo "$pkgName" | sed 's/@.*\///')
-            zipFileName="${packageName}.zip"
-            filePath="./packages/${packageName}/${zipFileName}"
-
-            if [[ -f "$filePath" ]]; then
-              echo "Uploading $filePath to release $tag"
-              gh release upload $tag $filePath --clobber
-            else
-              echo "File not found: $filePath"
-            fi
-          done
+        run: ./github/scripts/upload-zip.sh
+        env: 
+          PUBLISHED_PACKAGES: '${{ steps.create_release.outputs.publishedPackages }}'

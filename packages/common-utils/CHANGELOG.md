@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 1.3.0
+
+### Minor Changes
+
+- 7163235: Update docs
+
 ## 1.2.0
 
 ### Minor Changes

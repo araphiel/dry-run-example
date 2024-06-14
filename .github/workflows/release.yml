@@ -21,26 +21,30 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - uses: pnpm/action-setup@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
         with:
           run_install: true
 
-      - name: Create Release
+      - name: Create Version PR
         id: create_release
         uses: changesets/action@v1
         with:
           version: pnpm ci:version
           publish: pnpm ci:publish
-          createGithubReleases: true
 
       - name: Create plugin zip files
-        if: steps.create_create.outputs.published == 'true'
+        if: steps.create_release.outputs.published == 'true'
         run: pnpm ci:release-build
 
       - name: Add artifacts to the release
-        if: steps.create_create.outputs.published == 'true'
+        if: steps.create_release.outputs.published == 'true'
         run: |
           publishedPackages=${{ steps.create_release.outputs.publishedPackages }}
           publishedPackages=$(echo "$publishedPackages" | jq -c '.[]')

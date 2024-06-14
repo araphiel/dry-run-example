@@ -1,5 +1,11 @@
 # @jkomyno/common-utils
 
+## 2.0.0
+
+### Major Changes
+
+- 0506a5b: Release
+
 ## 1.3.0
 
 ### Minor Changes

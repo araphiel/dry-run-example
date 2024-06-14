@@ -1,5 +1,16 @@
 # @jkomyno/example
 
+## 1.0.0
+
+### Major Changes
+
+- 0506a5b: Release
+
+### Patch Changes
+
+- Updated dependencies [0506a5b]
+  - @jkomyno/common-utils@2.0.0
+
 ## 0.2.2
 
 ### Patch Changes
